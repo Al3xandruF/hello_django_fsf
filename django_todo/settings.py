@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get(
 DEBUG = development
 
 ALLOWED_HOSTS = ['8000-al3xandruf-hello-django--hyn8xbhm73.us2.codeanyapp.com',
-                 'https://git.heroku.com/hello-django-fsf.git']
+                 'https://hello-django-fsf.herokuapp.com/']
 
 
 # Application definition
