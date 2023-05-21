@@ -32,8 +32,8 @@ SECRET_KEY = os.environ.get(
     "SECRET_KEY", '5n*c2dh#f&*3+($54styzki2pcihy$!xb8gm5qnbslg@#m=(j8 ')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = development
-
+# DEBUG = development
+DEBUG = True
 ALLOWED_HOSTS = ['8000-al3xandruf-hello-django--hyn8xbhm73.us2.codeanyapp.com',
                  'hello-django-fsf.herokuapp.com']
 
@@ -84,17 +84,17 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if development:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-else:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
+# if development:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+# else:
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+}
 
 
 # Password validation
